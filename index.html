@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>To-Do List App</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7@8/framework7-bundle.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="app" class="framework7-root">
+    <div class="view view-main">
+      <div class="page">
+
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="title">To-Do-List App</div>
+          </div>
+        </div>
+
+        <div class="page-content">
+
+          <div class="block">
+            <p>Pendientes: <span id="pendientes">0</span></p>
+            <p>Completadas: <span id="completadas">0</span></p>
+          </div>
+
+          <div class="block-title">Agregar Tarea</div>
+          <div class="list">
+            <ul>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <input type="text" id="titulo" placeholder="Nombre de la tarea">
+                  </div>
+                </div>
+              </li>
+
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <textarea id="descripcion" placeholder="Descripción"></textarea>
+                  </div>
+                </div>
+              </li>
+
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <select id="tipo">
+                      <option value="">Seleccione tipo</option>
+                      <option value="Trabajo">Trabajo</option>
+                      <option value="Casa">Casa</option>
+                      <option value="Negocios">Negocios</option>
+                    </select>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="block">
+            <a class="button button-fill" id="btnAgregar">Agregar</a>
+          </div>
+
+          <div class="block-title">Lista de Tareas</div>
+          <div class="list simple-list">
+            <ul id="tareas"></ul>
+          </div>
+
+          <div class="block-title">Detalle de Tarea</div>
+          <div class="block">
+            <p id="detalleContenido">Seleccione una tarea</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/framework7@8/framework7-bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
